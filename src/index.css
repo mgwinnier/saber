@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shine-text {
+    position: relative;
+  }
+  
+  .shine {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shine::before {
+    content: '';
+    position: absolute;
+    top: -500%;
+    left: -500%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    animation: shine 2s infinite linear;
+  }
+  
+  @keyframes shine {
+    0% {
+      top: -500%;
+      left: -500%;
+    }
+    100% {
+      top: 130%;
+      left: 130%;
+    }
+  }
+  
+  
+  /* CSS for typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(40, end) forwards;
+  /* Adjust the steps(40, end) to control the "speed" of typing */
+}

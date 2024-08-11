@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'GameOfThrones';
+  src: url('../fonts/GameofThrones.ttf') format('truetype');
+}
+
+.font-game-of-thrones {
+  font-family: 'GameOfThrones', sans-serif;
+}
+
+/* Typewriter Effect Without Cursor */
+.typewriter p {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typewriter 6s steps(40, end) forwards;
+  /* Removed the cursor effect */
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
