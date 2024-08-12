@@ -20,11 +20,9 @@ function Navbar() {
     );
 
     return (
-        <nav className="bg-[#002F6C] px-6 sm:px-8 py-4 shadow-lg">
-            <div className="container mx-auto flex items-center justify-between md:justify-start">
-                <Link to="/" className="flex items-center mx-auto md:mx-0">
-                    <img src={logo} className="h-24 w-auto md:h-32 object-contain" alt="Saber Construction Logo" />
-                </Link>
+        <nav className="bg-[#002F6C] px-6 sm:px-8 py-4 shadow-lg relative">
+            <div className="container mx-auto flex items-center justify-between md:justify-start relative">
+                {/* Hamburger Menu (Only visible on mobile) */}
                 <button
                     type="button"
                     className="inline-flex items-center p-2 rounded-md text-[#FFC72C] hover:text-yellow-300 focus:outline-none focus:ring-2 focus:ring-gray-100 md:hidden"
@@ -34,6 +32,15 @@ function Navbar() {
                 >
                     {isOpen ? CloseIcon : HamburgerIcon}
                 </button>
+                
+                {/* Logo */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none">
+                    <Link to="/" className="flex items-center">
+                        <img src={logo} className="h-32 w-auto md:h-40 object-contain" alt="Saber Construction Logo" />
+                    </Link>
+                </div>
+
+                {/* Navigation Links (Only visible on desktop) */}
                 <div className="hidden md:flex items-center space-x-8 ml-auto">
                     <Link to="/" className="text-[#FFC72C] hover:text-yellow-300 font-semibold uppercase tracking-wide">Home</Link>
                     <Link to="/vendor" className="text-[#FFC72C] hover:text-yellow-300 font-semibold uppercase tracking-wide">Become a Vendor</Link>
@@ -41,6 +48,7 @@ function Navbar() {
                     <Link to="/contact" className="text-[#FFC72C] hover:text-yellow-300 font-semibold uppercase tracking-wide">Contact</Link>
                 </div>
             </div>
+            {/* Mobile Menu */}
             <div className={`${isOpen ? 'flex' : 'hidden'} flex-col md:hidden w-full mt-4 space-y-2`} id="navbar-default">
                 <Link to="/" className="text-[#FFC72C] hover:text-yellow-300 font-semibold uppercase py-2 px-4">Home</Link>
                 <Link to="/vendor" className="text-[#FFC72C] hover:text-yellow-300 font-semibold uppercase py-2 px-4">Become a Vendor</Link>
