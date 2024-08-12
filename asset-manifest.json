@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/saber/static/css/main.50104664.css",
-    "main.js": "/saber/static/js/main.54889524.js",
+    "main.css": "/saber/static/css/main.76b29a53.css",
+    "main.js": "/saber/static/js/main.bb00de89.js",
     "static/media/herobackground.png": "/saber/static/media/herobackground.4721759e3dff5a699b4a.png",
     "static/media/Vendors.pdf": "/saber/static/media/Vendors.52f6da896fe7da9e45da.pdf",
     "static/media/logo.png": "/saber/static/media/logo.106673d9b96fa3d31867.png",
     "static/media/image.png": "/saber/static/media/image.4d295845fc3b539fa67b.png",
     "index.html": "/saber/index.html",
-    "main.50104664.css.map": "/saber/static/css/main.50104664.css.map",
-    "main.54889524.js.map": "/saber/static/js/main.54889524.js.map"
+    "main.76b29a53.css.map": "/saber/static/css/main.76b29a53.css.map",
+    "main.bb00de89.js.map": "/saber/static/js/main.bb00de89.js.map"
   },
   "entrypoints": [
-    "static/css/main.50104664.css",
-    "static/js/main.54889524.js"
+    "static/css/main.76b29a53.css",
+    "static/js/main.bb00de89.js"
   ]
 }
