@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/saber/static/css/main.7746623f.css",
-    "main.js": "/saber/static/js/main.26c33874.js",
-    "static/media/herobackground.png": "/saber/static/media/herobackground.4721759e3dff5a699b4a.png",
-    "static/media/Vendors.pdf": "/saber/static/media/Vendors.52f6da896fe7da9e45da.pdf",
-    "static/media/logo.png": "/saber/static/media/logo.106673d9b96fa3d31867.png",
-    "static/media/image.png": "/saber/static/media/image.4d295845fc3b539fa67b.png",
-    "index.html": "/saber/index.html",
-    "main.7746623f.css.map": "/saber/static/css/main.7746623f.css.map",
-    "main.26c33874.js.map": "/saber/static/js/main.26c33874.js.map"
+    "main.css": "/static/css/main.7746623f.css",
+    "main.js": "/static/js/main.299d10f1.js",
+    "static/media/herobackground.png": "/static/media/herobackground.4721759e3dff5a699b4a.png",
+    "static/media/Vendors.pdf": "/static/media/Vendors.52f6da896fe7da9e45da.pdf",
+    "static/media/logo.png": "/static/media/logo.106673d9b96fa3d31867.png",
+    "static/media/image.png": "/static/media/image.4d295845fc3b539fa67b.png",
+    "index.html": "/index.html",
+    "main.7746623f.css.map": "/static/css/main.7746623f.css.map",
+    "main.299d10f1.js.map": "/static/js/main.299d10f1.js.map"
   },
   "entrypoints": [
     "static/css/main.7746623f.css",
-    "static/js/main.26c33874.js"
+    "static/js/main.299d10f1.js"
   ]
 }
