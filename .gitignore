@@ -11,6 +11,12 @@
 # production
 /build
 
+# raw media source assets (not deployed)
+reference/
+
+# local agent tooling
+.claude/
+
 # misc
 .DS_Store
 .env.local

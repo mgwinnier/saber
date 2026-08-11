@@ -1,29 +1,45 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Hero from './components/HeroSection';
-import About from './components/AboutUs';
-import Vendor from './vendor';
-import Statement from './statement';
-import Contact from './contact';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import About from './pages/About';
+import Vendor from './pages/Vendor';
+import CapabilityStatement from './pages/CapabilityStatement';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function App() {
+  const location = useLocation();
+  const reduceMotion = useReducedMotion();
+
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
       <main>
-        <Routes>
-          <Route path="/" element={
-            <>
-             <Hero />
-             <About />
-            </>
-          } />
-        <Route path="/vendor" element={<Vendor />} />
-        <Route path="/statement" element={<Statement />} />
-        <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={location.pathname}
+            initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+          >
+            <Routes location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/vendor" element={<Vendor />} />
+              <Route path="/statement" element={<CapabilityStatement />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </motion.div>
+        </AnimatePresence>
       </main>
       <Footer />
     </div>

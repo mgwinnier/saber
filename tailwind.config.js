@@ -1,51 +1,36 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
-// This plugin adds each Tailwind color as a global CSS variable, e.g., var(--gray-200).
-function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-}
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Adjusted to include all your project files
-  ],
-  darkMode: "class", // or 'media' or 'class'
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        // Custom colors
-        primary: '#ffd700', // Gold color for primary
-        secondary: '#ffed4a', // Lighter gold for secondary
-        // You can continue to add or adjust colors as needed
+        navy: {
+          50: '#EEF3FA',
+          100: '#DCE6F3',
+          200: '#B5CBE5',
+          300: '#84A7D3',
+          400: '#4D7DBC',
+          500: '#245CA4',
+          600: '#0F4489',
+          700: '#063876',
+          800: '#002F6C',
+          900: '#012450',
+          950: '#01173A',
+        },
+        gold: {
+          300: '#FFDD70',
+          400: '#FFD24A',
+          500: '#FFC72C',
+          600: '#E6AC14',
+          700: '#C68F06',
+        },
+        paper: '#F7F5F0',
       },
       fontFamily: {
-        // Custom font families
-        body: ['"Segoe UI"', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
-        // Add other custom fonts as needed
+        display: ['Archivo', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
-      screens: {
-        // Custom breakpoints
-        xl: '1280px',
-        '2xl': '1536px',
-        // Add or adjust breakpoints as needed
-      },
-      // Any other theme extensions can be added here
     },
-    // You can also override other theme values or add new ones
   },
-  plugins: [
-    addVariablesForColors, // Include the plugin for adding color variables
-    // Include any other Tailwind CSS plugins you might need
-  ],
-};
+  plugins: [],
+}
