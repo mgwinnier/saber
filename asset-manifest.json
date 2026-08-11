@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a10f9fb.css",
-    "main.js": "/static/js/main.f3fd1271.js",
-    "static/media/herobackground.png": "/static/media/herobackground.4721759e3dff5a699b4a.png",
+    "main.css": "/static/css/main.64513b5c.css",
+    "main.js": "/static/js/main.d6ab429b.js",
     "static/media/Vendors.pdf": "/static/media/Vendors.52f6da896fe7da9e45da.pdf",
-    "static/media/logo.png": "/static/media/logo.106673d9b96fa3d31867.png",
+    "static/media/maney.jpg": "/static/media/maney.71904892a22384d2ca26.jpg",
+    "static/media/logo-mark.png": "/static/media/logo-mark.d946b106fcba0127f179.png",
+    "static/media/logo-mark-white.png": "/static/media/logo-mark-white.5a64089140faed8d2d93.png",
     "static/media/image.png": "/static/media/image.4d295845fc3b539fa67b.png",
     "index.html": "/index.html",
-    "main.0a10f9fb.css.map": "/static/css/main.0a10f9fb.css.map",
-    "main.f3fd1271.js.map": "/static/js/main.f3fd1271.js.map"
+    "main.64513b5c.css.map": "/static/css/main.64513b5c.css.map",
+    "main.d6ab429b.js.map": "/static/js/main.d6ab429b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a10f9fb.css",
-    "static/js/main.f3fd1271.js"
+    "static/css/main.64513b5c.css",
+    "static/js/main.d6ab429b.js"
   ]
 }
